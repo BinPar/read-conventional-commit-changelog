@@ -1,5 +1,9 @@
 name: 'Read conventional commit CHANGELOG'
 description: 'Reads the conventional commit generated CHANGELOG and outputs the requested version changes'
+author: Marcos González Andrés
+branding:
+  icon: 'list'
+  color: 'yellow'
 inputs:
   changelog-path:
     description: 'The CHANGELOG path. Defaults to ./CHANGELOG.md'
