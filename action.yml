@@ -1,0 +1,17 @@
+name: 'Read conventional commit CHANGELOG'
+description: 'Reads the conventional commit generated CHANGELOG and outputs the requested version changes'
+inputs:
+  changelog-path:
+    description: 'The CHANGELOG path. Defaults to ./CHANGELOG.md'
+    required: false
+    default: './CHANGELOG.md'
+  version:
+    description: 'The version of the changelog to output. Defaults to latest'
+    required: false
+    default: latest
+outputs:
+  version-changelog:
+    description: 'The requested version changes'
+runs:
+  using: 'node14'
+  main: 'dist/index.js'
