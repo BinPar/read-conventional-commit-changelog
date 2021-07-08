@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const fs = require('fs/promises');
+const fs = require('fs').promises;
 
 async function main() {
   try {
