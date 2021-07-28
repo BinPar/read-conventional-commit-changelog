@@ -552,15 +552,15 @@ async function main() {
     let simpleVersion = versionToRetrieve.replace(/^v/, '');
     const changelogStr = await fs.readFile(changelogPath, { encoding: 'utf-8' });
     if (simpleVersion === 'latest') {
-      const versionHeaderRegExp = /### ?\[?(\d+.\d+.\d+)\]?/;
+      const versionHeaderRegExp = /#{1,3} ?\[?(\d+.\d+.\d+)\]?/;
       const headerMatch = changelogStr.match(versionHeaderRegExp);
       if (headerMatch && headerMatch[1]) {
         [, simpleVersion] = headerMatch;
       }
     }
-    let headerVersionIndex = changelogStr.indexOf(`### [${simpleVersion}]`);
+    let headerVersionIndex = changelogStr.indexOf(`# [${simpleVersion}]`);
     if (headerVersionIndex === -1) {
-      headerVersionIndex = changelogStr.indexOf(`### ${simpleVersion}`);
+      headerVersionIndex = changelogStr.indexOf(`# ${simpleVersion}`);
       if (headerVersionIndex === -1) {
         throw new Error(
           `The version "${simpleVersion}" can't be retrieved from the CHANGELOG located in ${changelogPath}`,
@@ -568,7 +568,7 @@ async function main() {
       }
     }
     const changelogFromVersion = changelogStr.substr(headerVersionIndex);
-    const [, nextVersionHeader] = changelogFromVersion.match(/### ?\[?(\d+.\d+.\d+)\]?/g);
+    const [, nextVersionHeader] = changelogFromVersion.match(/#{1,3} ?\[?(\d+.\d+.\d+)\]?/g);
     core.setOutput(
       'version-changelog',
       nextVersionHeader
