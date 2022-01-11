@@ -13,7 +13,7 @@ Reads the conventional commit generated CHANGELOG and outputs the requested vers
 <!-- start usage -->
 
 ```yaml
-- uses: BinPar/read-conventional-commit-changelog@v1
+- uses: BinPar/read-conventional-commit-changelog@v1.1.0
   with:
     # The CHANGELOG path. Defaults to ./CHANGELOG.md
     # Default: ./CHANGELOG.md
@@ -22,15 +22,21 @@ Reads the conventional commit generated CHANGELOG and outputs the requested vers
     # The version of the changelog to output. Defaults to latest
     # Default: latest
     version: ""
+
+    # If false the action will not fail and instead returns empty string if an error
+    # is raised. Defaults to true
+    # Default: true
+    fail: ""
 ```
 
 <!-- end usage -->
 <!-- start inputs -->
 
-| **Input**            | **Description**                                            |   **Default**    | **Required** |
-| :------------------- | :--------------------------------------------------------- | :--------------: | :----------: |
-| **`changelog-path`** | The CHANGELOG path. Defaults to ./CHANGELOG.md             | `./CHANGELOG.md` |  **false**   |
-| **`version`**        | The version of the changelog to output. Defaults to latest |     `latest`     |  **false**   |
+| **Input**            | **Description**                                                                                            |   **Default**    | **Required** |
+| :------------------- | :--------------------------------------------------------------------------------------------------------- | :--------------: | :----------: |
+| **`changelog-path`** | The CHANGELOG path. Defaults to ./CHANGELOG.md                                                             | `./CHANGELOG.md` |  **false**   |
+| **`version`**        | The version of the changelog to output. Defaults to latest                                                 |     `latest`     |  **false**   |
+| **`fail`**           | If false the action will not fail and instead returns empty string if an error is raised. Defaults to true |      `true`      |  **false**   |
 
 <!-- end inputs -->
 <!-- start outputs -->
