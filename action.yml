@@ -13,6 +13,10 @@ inputs:
     description: 'The version of the changelog to output. Defaults to latest'
     required: false
     default: latest
+  fail:
+    description: 'If false the action will not fail and instead returns empty string if an error is raised. Defaults to true'
+    required: false
+    default: true
 outputs:
   version-changelog:
     description: 'The requested version changes'
