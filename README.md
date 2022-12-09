@@ -5,7 +5,12 @@
 <!-- end title -->
 <!-- start description -->
 
-Reads the conventional commit generated CHANGELOG and outputs the requested version changes
+Reads the conventional commit generated CHANGELOG and outputs the requested version changes.
+
+| **package version** | **github runner version** |
+| :------------------ | :------------------------ |
+| < v2.0.0            | < 2.297.0                 |
+| >= v2.0.0           | >= 2.297.0                |
 
 <!-- end description -->
 <!-- start contents -->

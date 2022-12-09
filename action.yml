@@ -1,5 +1,5 @@
 name: 'Read conventional commit CHANGELOG'
-description: 'Reads the conventional commit generated CHANGELOG and outputs the requested version changes'
+description: "Reads the conventional commit generated CHANGELOG and outputs the requested version changes.\n\n| **package version**          | **github runner version** |\n| :----------------------------- | :------------------------ |\n| < v2.0.0  | < 2.297.0                 |\n| >= v2.0.0 | >= 2.297.0                |"
 author: Marcos González Andrés
 branding:
   icon: 'list'
