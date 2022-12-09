@@ -7,18 +7,19 @@
 
 Reads the conventional commit generated CHANGELOG and outputs the requested version changes.
 
+<!-- end description -->
+
 | **package version** | **github runner version** |
 | :------------------ | :------------------------ |
 | < v2.0.0            | < 2.297.0                 |
 | >= v2.0.0           | >= 2.297.0                |
 
-<!-- end description -->
 <!-- start contents -->
 <!-- end contents -->
 <!-- start usage -->
 
 ```yaml
-- uses: BinPar/read-conventional-commit-changelog@v1.1.0
+- uses: BinPar/read-conventional-commit-changelog@v2.0.0
   with:
     # The CHANGELOG path. Defaults to ./CHANGELOG.md
     # Default: ./CHANGELOG.md
