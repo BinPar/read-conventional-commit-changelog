@@ -19,7 +19,7 @@ Reads the conventional commit generated CHANGELOG and outputs the requested vers
 <!-- start usage -->
 
 ```yaml
-- uses: BinPar/read-conventional-commit-changelog@v2.0.0
+- uses: BinPar/read-conventional-commit-changelog@v2.0.2
   with:
     # The CHANGELOG path. Defaults to ./CHANGELOG.md
     # Default: ./CHANGELOG.md
